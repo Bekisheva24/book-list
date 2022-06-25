@@ -53,7 +53,7 @@ UI.prototype.clearFields = function () {
 
 
 document.getElementById("book-form").addEventListener("submit", (e) => {
-	e.preventDefault();
+
 	const title = document.getElementById('title').value;
 	const author = document.getElementById('author').value;
 	const isbn = document.getElementById('isbn').value;
@@ -72,6 +72,8 @@ document.getElementById("book-form").addEventListener("submit", (e) => {
 		ui.showAlert("Book Added!", "success");
 		ui.clearFields();
 	}
+
+	e.preventDefault();
 });
 
 
